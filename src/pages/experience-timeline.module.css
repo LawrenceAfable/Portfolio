@@ -1,0 +1,96 @@
+/* ===================================
+   EXPERIENCE TIMELINE
+   =================================== */
+
+.timelineContainer {
+  width: 100%;
+  padding: 20px;
+}
+
+.timelineList {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 30px;
+  border-left: 2px solid #e5e7eb;
+  padding-left: 30px;
+}
+
+/* Remove the line for the very last item */
+.timelineItem:last-child {
+  border-left: 2px solid transparent;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -9px; /* Centers the dot on the 2px border */
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.timelineDot.active {
+  background-color: black;
+  border-color: black;
+}
+
+.timelineContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.timelineRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.jobTitle {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.yearBadge {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--heading-color);
+  background-color: var(--bg-1-color);
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.companyName {
+  font-size: var(--font-size-xs);
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .timelineRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .yearBadge {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,56 @@
+/* MAIN CSS FILE */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* currently used */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Geist', sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+:root {
+  /* COLOR */
+  --bg-color: #fcfcfc;
+  --bg1-color: #ffffff;
+  --text-color: #242424;
+  --heading-color: #333;
+  --table-color: #555555;
+  --secondary-color: #545f71;
+  --primary-color: #007bff;
+
+  /* PAGES MARGIN */
+  --margin-size-primary: 0 20vw;
+  --margin-size-secondary: 0 2.5vw;
+
+  /* FONT SIZES (rem-based, 1rem = 16px) */
+  --font-size-xs: 0.75rem;
+  /* 12px – table body, captions, meta text */
+  --font-size-sm: 0.8125rem;
+  /* 13px – table headers, secondary labels */
+  --font-size-md: 0.875rem;
+  /* 14px – default body text */
+  --font-size-base: 1rem;
+  /* 16px – base/root font size */
+  --font-size-title: 1.125rem;  /* 18px */
+  --font-size-h2: 1.25rem;
+  /* 20px – h2 headings */
+  --font-size-h1: 1.5rem;
+  /* 24px – h1 headings */
+  --font-size-display: 1.8rem;
+  /* ~29px – page headers / section titles */
+
+}
