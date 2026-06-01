@@ -1,26 +1,57 @@
 // css
 import styles from './main-page.module.css';
+
+// components
 import ExperienceTimeline from './ExperienceTimeline';
+import Carousel from '../components/Carousel.jsx';
 
 export default function MainPage() {
-
+  const images = [
+    {
+      src: '/EXP_FIGMA.png',
+      alt: 'sample'
+    },
+    {
+      src: '/EXP_BARTERHUB.png',
+      alt: 'sample2'
+    },
+    {
+      src: '/TICKETFLOW_DASHBOARD.jpeg',
+      alt: 'sample3'
+    },
+    {
+      src: '/B_Profile_Rock.png',
+      alt: 'sample2'
+    },
+    {
+      src: '/EXP_TUTOR_1.jpeg',
+      alt: 'sample3'
+    }
+  ]
   return (
     <main className={styles.mpPage}>
+      {/* HEADER */}
       <section className={styles.layoutFlex}>
         {/* Profile */}
         <div className={styles.mpProfileContainer}>
           <img
-            src="SAMPLE.png"
-            alt="Lawrence Afable Profile"
-            className={styles.mpProfileImage}
+            src="/B_Profile_1.png"
+            alt="Profile default"
+            className={`${styles.mpProfileImage} ${styles.defaultImg}`}
+          />
+          <img
+            src="/B_Profile_Rock.png"
+            alt="Profile hover"
+            className={`${styles.mpProfileImage} ${styles.hoverImg}`}
           />
         </div>
+
         {/* Main Content */}
         <div className={styles.layoutColumn}>
           <div className={styles.mpNameContainer}>
             <h1 className={styles.mpName}>Lawrence Afable</h1>
             <div className={styles.mpVerifiedBadge}>
-              <img src="VERIFIED.png" alt="Verified Badge" />
+              <img src="/VERIFIED.png" alt="Verified Badge" />
             </div>
           </div>
           <div className={styles.mpLocationContainer}>
@@ -29,7 +60,7 @@ export default function MainPage() {
             </span>
             <span className={styles.mpLocation}>Quezon City, Philippines</span>
           </div>
-          <h3 className={styles.mpTitle}>Frontend Developer | BSIT Undergraduate</h3>
+          <h3 className={styles.mpTitle}>Frontend Developer | UI/UX | Aspiring Fullstack Developer</h3>
           <a
             className={styles.mpCell}
             href="mailto:lawrencearellanoafable@gmail.com"
@@ -42,6 +73,7 @@ export default function MainPage() {
         </div>
       </section>
       <br />
+      {/* CONTENT */}
       <section className={styles.layoutColumn}>
         {/* about - tech - experience */}
         <div className={styles.layoutFlex}>
@@ -74,7 +106,7 @@ export default function MainPage() {
                   <div className={styles.sectionCellRow}>
                     <div className={styles.sectionCell}>HTML</div>
                     <div className={styles.sectionCell}>CSS</div>
-                    <div className={styles.sectionCell}>React</div>
+                    <div className={styles.sectionCell}>React + Vite</div>
                     <div className={styles.sectionCell}>JavaScript</div>
                     <div className={styles.sectionCell}>CSS Module</div>
                   </div>
@@ -123,7 +155,7 @@ export default function MainPage() {
           <div className={styles.layoutSection}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionIcon}>
-                <i class="fa-solid fa-folder-open"></i>
+                <i className="fa-solid fa-folder-open"></i>
               </span>
               <h2>Projects</h2>
             </div>
@@ -157,6 +189,17 @@ export default function MainPage() {
               <p>Beyond coding, I develop digital art and design work, including illustrations, logos, character concepts, fanart, and album covers. I focus on delivering visually appealing and cohesive designs that align with client vision, using strong skills in color theory, composition, and visual storytelling.</p>
               <p><strong>Design Portfolio:</strong> Illustration, Logo, Character Design, Fanart, Album Covers</p>
             </div>
+            <a
+              className={styles.socmedCell}
+              href="https://lorenzoshiit.carrd.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.socmedCellIcon}>
+                <i className="fa-solid fa-link"></i>
+              </span>
+              <span className={styles.socmedCellLabel}>Carrd Portfolio</span>
+            </a>
           </div>
         </div>
         {/* social links */}
@@ -222,7 +265,7 @@ export default function MainPage() {
             </div>
           </div>
         </div>
-        {/* Gallery */}
+        {/* gallery */}
         <div className={styles.layoutSection}>
           <div className={styles.sectionHeader}>
             <span className={styles.sectionIcon}>
@@ -231,11 +274,11 @@ export default function MainPage() {
             <h2>Gallery</h2>
           </div>
           <div className={styles.sectionContent}>
-            
+            <Carousel images={images} />
           </div>
         </div>
       </section>
 
     </main>
   );
-}
+}s
